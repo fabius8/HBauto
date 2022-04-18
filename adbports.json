@@ -1,0 +1,122 @@
+[
+    {
+        "Index": 14,
+        "Name": "HB_01",
+        "AdbPort": 62038
+    },
+    {
+        "Index": 15,
+        "Name": "HB_02",
+        "AdbPort": 62039
+    },
+    {
+        "Index": 13,
+        "Name": "HB_03",
+        "AdbPort": 62037
+    },
+    {
+        "Index": 16,
+        "Name": "HB_04",
+        "AdbPort": 62040
+    },
+    {
+        "Index": 17,
+        "Name": "HB_05",
+        "AdbPort": 62041
+    },
+    {
+        "Index": 10,
+        "Name": "HB_06",
+        "AdbPort": 62034
+    },
+    {
+        "Index": 20,
+        "Name": "HB_07",
+        "AdbPort": 62044
+    },
+    {
+        "Index": 8,
+        "Name": "HB_08",
+        "AdbPort": 62032
+    },
+    {
+        "Index": 7,
+        "Name": "HB_09",
+        "AdbPort": 62031
+    },
+    {
+        "Index": 6,
+        "Name": "HB_10",
+        "AdbPort": 62030
+    },
+    {
+        "Index": 11,
+        "Name": "HB_11",
+        "AdbPort": 62035
+    },
+    {
+        "Index": 12,
+        "Name": "HB_12",
+        "AdbPort": 62036
+    },
+    {
+        "Index": 18,
+        "Name": "HB_13",
+        "AdbPort": 62042
+    },
+    {
+        "Index": 19,
+        "Name": "HB_14",
+        "AdbPort": 62043
+    },
+    {
+        "Index": 0,
+        "Name": "HB_15",
+        "AdbPort": 62001
+    },
+    {
+        "Index": 1,
+        "Name": "HB_16",
+        "AdbPort": 62025
+    },
+    {
+        "Index": 2,
+        "Name": "HB_17",
+        "AdbPort": 62026
+    },
+    {
+        "Index": 3,
+        "Name": "HB_18",
+        "AdbPort": 62027
+    },
+    {
+        "Index": 4,
+        "Name": "HB_19",
+        "AdbPort": 62028
+    },
+    {
+        "Index": 5,
+        "Name": "HB_20",
+        "AdbPort": 62029
+    },
+    {
+        "Index": 9,
+        "Name": "HB_21",
+        "AdbPort": 62033
+    },
+    {
+        "Index": 21,
+        "Name": "HB_22",
+        "AdbPort": 62045
+    },
+    {
+        "Index": 22,
+        "Name": "HB_23",
+        "AdbPort": 62046
+    },
+    {
+        "Index": 23,
+        "Name": "HB_24",
+        "AdbPort": 62047
+    }
+]

@@ -1,0 +1,20 @@
+[
+    {
+        "Username": "",
+        "Secret": "",
+        "Issuer": "HUOBI-001",
+        "RowIndex": 1,
+        "Password": "",
+        "UID": "",
+        "Point": ""
+    },
+    {
+        "Secret": "",
+        "RowIndex": 2,
+        "Username": "",
+        "Issuer": "HUOBI-002",
+        "Password": "",
+        "UID": "",
+        "Point": ""
+    }
+]
