@@ -55,9 +55,9 @@ def login():
         if poco("pro.huobi:id/tv_account_uid").wait(timeout=2).exists():
             print("Already login")
             return
-        elif poco(textMatches=".*Sign Up").wait(timeout=10).exists():
-            print("Login again")
-            poco("pro.huobi:id/tv_account_name").click()
+    if poco(textMatches=".*Sign Up").wait(timeout=10).exists():
+        print("Login again")
+        poco("pro.huobi:id/tv_account_name").click()
         
     if poco("pro.huobi:id/login_account_edit").wait(timeout=10).exists():
         Email = poco("pro.huobi:id/login_account_edit").get_text()
