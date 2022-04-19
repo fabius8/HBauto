@@ -1,0 +1,8 @@
+webdriver-manager
+selenium==3.14.1
+pyotp
+pynput
+pocoui
+Jinja2==3.0.3
+airtest-selenium
+airtest
