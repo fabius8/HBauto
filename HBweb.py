@@ -50,7 +50,7 @@ driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
     "source": js
 })
 
-driver.implicitly_wait(20)
+driver.implicitly_wait(10)
 
 driver.get("https://www.huobi.com/en-us/finance/account/spot")
 driver.find_element_by_xpath("//input[@type='text']").send_keys(Keys.CONTROL, "a")
@@ -60,6 +60,7 @@ driver.find_element_by_id("password").send_keys(choose["Password"])
 driver.find_element_by_xpath("//button[@class='login-btn-submit']").click()
 sleep(2)
 
+driver.implicitly_wait(10)
 try:
     while driver.find_element_by_xpath("//div[@id='alicaptcha-1']").get_attribute('style') == "display: none;":
         print("good test not come")
@@ -74,7 +75,7 @@ except:
     pass
 
 
-driver.implicitly_wait(4)
+driver.implicitly_wait(3)
 while True:
     try:
         sleep(2)
