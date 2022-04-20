@@ -52,7 +52,7 @@ def login():
      
     if poco("pro.huobi:id/main_account_tab_checkbox").exists():
         poco("pro.huobi:id/main_account_tab_checkbox").click()
-        if poco("pro.huobi:id/tv_account_uid").wait(timeout=2).exists():
+        if poco(textMatches="UID.*").wait(timeout=2).exists():
             print("Already login")
             return
     if poco(textMatches=".*Sign Up").wait(timeout=10).exists():
@@ -76,8 +76,11 @@ def login():
                     poco("pro.huobi:id/btn_action").click()
                 elif poco("nc_1_n1z").wait(timeout=10).exists():
                     poco("nc_1_n1z").swipe([1, 0.015])
-                    poco("pro.huobi:id/et_ga_input").wait(timeout=10).set_text(Auth)
-                    poco("pro.huobi:id/btn_action").click()
+                    if poco(textMatches=".*Please refresh and.*").wait(timeout=2).exists():
+                        poco(textMatches=".*Please refresh and.*").click()
+                        poco("nc_1_n1z").swipe([1, 0.015])
+                        poco("pro.huobi:id/et_ga_input").wait(timeout=10).set_text(Auth)
+                        poco("pro.huobi:id/btn_action").click()
 
     
 def CandyDrop():    
@@ -101,7 +104,7 @@ def switchAccount():
 
 
 if __name__ == "__main__":
-    hbstart = "HB_01"
+    hbstart = "HB_12"
     hbend = "HB_24"
     for i in adbportsjson:
         index = i["Index"]
