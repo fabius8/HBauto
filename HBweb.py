@@ -73,12 +73,30 @@ except:
     print("test missing")
     pass
 
-sleep(2)
-totp = pyotp.TOTP(choose["Secret"])
-Auth = totp.now()
-driver.find_element_by_xpath("//input[@maxlength='6']").send_keys(Auth)
-sleep(1)
-#driver.find_element_by_xpath("//button[@type='submit']").click()
+while:
+    try:
+        sleep(2)
+        totp = pyotp.TOTP(choose["Secret"])
+        Auth = totp.now()
+        driver.find_element_by_xpath("//input[@maxlength='6']").send_keys(Auth)
+        sleep(1)
+        break
+        #driver.find_element_by_xpath("//button[@type='submit']").click()
+    except:
+        print("can not find Secret")
+        pass
+
+    try:
+        driver.find_element_by_id("nc_1_refresh1").click()
+        action = ActionChains(driver)
+        block = driver.find_element_by_id("nc_1_n1z")
+        action.drag_and_drop_by_offset(block, 500, 0)
+        action.perform()
+    except:
+        print("can not find refresh")
+        pass     
+
+    
 driver.implicitly_wait(20)
 
 
