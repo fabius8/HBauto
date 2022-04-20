@@ -60,7 +60,7 @@ driver.find_element_by_id("password").send_keys(choose["Password"])
 driver.find_element_by_xpath("//button[@class='login-btn-submit']").click()
 sleep(2)
 
-driver.implicitly_wait(10)
+driver.implicitly_wait(5)
 try:
     while driver.find_element_by_xpath("//div[@id='alicaptcha-1']").get_attribute('style') == "display: none;":
         print("good test not come")
@@ -78,11 +78,11 @@ except:
 driver.implicitly_wait(3)
 while True:
     try:
-        sleep(2)
+        #sleep(2)
         totp = pyotp.TOTP(choose["Secret"])
         Auth = totp.now()
         driver.find_element_by_xpath("//input[@maxlength='6']").send_keys(Auth)
-        sleep(1)
+        #sleep(1)
         break
         #driver.find_element_by_xpath("//button[@type='submit']").click()
     except:
