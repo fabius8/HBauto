@@ -94,7 +94,17 @@ while True:
         action.perform()
     except:
         print("can not find refresh")
-        pass     
+        pass
+
+    try:
+        driver.find_element_by_id("nc_2_refresh1").click()
+        action = ActionChains(driver)
+        block = driver.find_element_by_id("nc_1_n1z")
+        action.drag_and_drop_by_offset(block, 500, 0)
+        action.perform()
+    except:
+        print("can not find refresh")
+        pass       
 
     
 driver.implicitly_wait(20)
