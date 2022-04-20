@@ -23,22 +23,32 @@ if len(sys.argv) >= 2:
     print(sys.argv[1])
     number = int(sys.argv[1])
 else:
-    print("missing number parameter!")
+    print("please input number")
+    sleep(5)
     sys.exit()
 
 if number < 1 or number > 235:
+    sleep(5)
     sys.exit()
     
 choose = pointhbjson[number]
 print(choose["Username"], choose["Password"], choose["Secret"])
 
 opt = Options()
-opt.add_argument("--user-data-dir=C:\\Users\\fabiu\\AppData\\Local\\Google\\Chrome\\User Data")
-opt.add_argument("--profile-directory=" + str(number))
-opt.add_argument("--remote-debugging-port=9222")
-opt.add_experimental_option('excludeSwitches', ['enable-automation']) 
+opt.add_argument("--user-data-dir=C:\\Users\\fabiu\\AppData\\Local\\Google\\Chrome\\User Data\\" + str(number))
+#opt.add_argument("--remote-debugging-port=9222")
+opt.add_experimental_option('excludeSwitches', ['enable-automation'])
+opt.add_experimental_option('useAutomationExtension', False)
+opt.add_argument("--disable-blink-features=AutomationControlled")
 
 driver = WebChrome(ChromeDriverManager().install(), options=opt)
+
+with open('./stealth.min.js') as f:
+    js = f.read()
+driver.execute_cdp_cmd("Page.addScriptToEvaluateOnNewDocument", {
+    "source": js
+})
+
 driver.implicitly_wait(20)
 
 driver.get("https://www.huobi.com/en-us/finance/account/spot")
