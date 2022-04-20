@@ -73,6 +73,8 @@ except:
     print("test missing")
     pass
 
+
+driver.implicitly_wait(4)
 while True:
     try:
         sleep(2)
@@ -107,6 +109,6 @@ while True:
         pass       
 
     
-driver.implicitly_wait(20)
+
 
 
