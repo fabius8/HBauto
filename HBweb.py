@@ -73,7 +73,7 @@ except:
     print("test missing")
     pass
 
-while:
+while True:
     try:
         sleep(2)
         totp = pyotp.TOTP(choose["Secret"])
